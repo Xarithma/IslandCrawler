@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/utils/PathFinder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=3]
+
+[node name="MapTemplate" type="Node2D"]
+
+[node name="path_finder" parent="." instance=ExtResource( 2 )]
+
+[node name="_nav" type="Navigation2D" parent="." groups=[
+"Map Holder",
+]]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]

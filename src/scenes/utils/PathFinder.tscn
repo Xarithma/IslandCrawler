@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+onready var nav_2d = get_owner().get_node(\"_nav\")
+onready var player = get_tree().get_nodes_in_group(\"Player\")[0]
+
+# onready var line_2d = get_parent().get_node(\"line_2d\")
+
+#func _unhandled_input(event: InputEvent) -> void:
+#	if not event is InputEventMouseButton:
+#		return
+#	if event.button_index != BUTTON_LEFT or not event.pressed:
+#		return
+#
+#	for enemy in get_tree().get_nodes_in_group(\"Enemies\"):
+#		var new_path = nav_2d.get_simple_path(enemy.global_position, event.position)
+#		enemy.path = new_path
+#		line_2d.points = new_path
+
+func _process(_delta):
+	for enemy in get_tree().get_nodes_in_group(\"Enemies\"):
+		var new_path = nav_2d.get_simple_path(enemy.global_position, player.global_position)
+		enemy.path = new_path
+		# line_2d.points = new_path
+"
+
+[node name="path_finder" type="Node"]
+script = SubResource( 1 )
