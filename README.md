@@ -1,5 +1,9 @@
-# IslandCrawler
-Janoesh ledgjen, fhen a Jaenosh hedgjen! Deauluthan odha vharohm.
+# Island Crawler
+## A dungeon crawler make in Godot
 
-
-CICA! KUTYA! MÉRÉSI HIBA!
+# TODO:
+- Add enemy textures
+- Add enemy types
+- Add more variety to the maps
+- Implement the "weapon and armor" system
+- Add bosses
