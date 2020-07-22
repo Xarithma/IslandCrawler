@@ -1,5 +1,5 @@
 # Island Crawler
-## A dungeon crawler make in Godot
+A dungeon crawler make in Godot
 
 # TODO:
 - Add enemy textures
